@@ -1,22 +1,44 @@
-class Hw1Q1():
+class Hw1Q1:
     @staticmethod
     def timeConvert(input_second):
-        min = input_second // 60
-        sec = input_second % 60
-        hour = min // 60
-        min = min % 60
-        day = hour // 24
-        hour = hour % 24
-        if day != 0:
-            print(day, "days,", hour, "hours,", min, "minutes,", sec, "seconds")
-        if day == 0 and hour != 0:
-            print(hour, "hours,", min, "minutes,", sec, "seconds")
-        if day == 0 and hour == 0 and min != 0:
-            print(min, "minutes,", sec, "seconds")
-        if day == 0 and hour == 0 and min == 0:
-            print(sec, "seconds")
+        secdict = [0,0,0,0]
+        secdict[2] = input_second // 60
+        secdict[3] = input_second % 60
+        secdict[1] = secdict[2] // 60
+        secdict[2] = secdict[2] % 60
+        secdict[0] = secdict[1] // 24
+        secdict[1] = secdict[1] % 24
+        days=""
+        hrs=""
+        mins=""
+        secs=""
 
+        if secdict[0]!=0:
+            if secdict[0]>1:
+                days= str(secdict[0])+" days"
+            elif secdict[0]==1:
+                days= str(secdict[0]) + " day"
+        if secdict[1]!=0:
+            if secdict[0]!=0:
+                hrs = ", "
+            if secdict[1]>1:
+                hrs= hrs+str(secdict[1])+" hours"
+            elif secdict[1]==1:
+                hrs= hrs+str(secdict[1]) + " hour"
+        if secdict[2]!=0:
+            if secdict[0]!=0 or secdict[1]!=0:
+                mins = ", "
+            if secdict[2]>1:
+                mins= mins + str(secdict[2])+" minutes"
+            elif secdict[2]==1:
+                mins= mins + str(secdict[2]) + " minute"
+        if secdict[3]!=0:
+            if secdict[0]!=0 or secdict[1]!=0 or secdict[2]!=0:
+                secs = ", "
+            if secdict[3]>1:
+                secs= secs + str(secdict[3])+" seconds"
+            elif secdict[3]==1:
+                secs= secs + str(secdict[3]) + " second"
 
-if __name__ == "__main__":
-    input_second = int(input("Input seconds: "))
-    Hw1Q1.timeConvert(input_second)
+        return days+hrs+mins+secs
+
