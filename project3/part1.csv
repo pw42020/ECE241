@@ -1,0 +1,19 @@
+﻿Patrick Walsh,,,,,
+ECE241 Project 3 Part I,,,,,
+Written Portion,,,,,
+,,,,,
+,,,,,
+Question 1,,,,Question 2,Question 3
+Price,Calculated Price,Percent Error,,MSE,MTE
+320000,366009.5,14.38%,,1163022702,-32983.2
+185000,206718,11.74%,,(Prefer to be small as possible),
+215000,248825.5,15.73%,,,
+319900,347087,8.50%,,"MSE better amplifies outliers which is better for ML algorithms. You need the algorithm to work in most cases including outlier cases, where MTE doesn't necessarily show as pronounced. Also if one calculated price is w less than its actual and another is w more, those two will cancel in MTE, where they won't in MSE.",
+164000,182662,11.38%,,,
+205000,236120,15.18%,,,
+340000,377814,11.12%,,,
+260000,298521.5,14.82%,,,
+227875,257705,13.09%,,,
+438780,483924.5,10.29%,,,
+,,,,,
+,,,,,
